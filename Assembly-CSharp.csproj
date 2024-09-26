@@ -68,6 +68,8 @@
     <Compile Include="Assets\mhk.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TileSet\DarkForest\about.txt" />
+    <None Include="Assets\TileSet\Pixel2DCastle1.1\about.txt" />
     <None Include="Assets\TileSet\ps1\public-license.txt" />
     <None Include="Assets\TileSet\ps1\PixelPlatefomerSet2\public-license.txt" />
   </ItemGroup>
