@@ -68,6 +68,12 @@
     <Compile Include="Assets\mhk.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TileSet\DarkForest\about.txt" />
+    <None Include="Assets\TileSet\Pixel2DCastle1.1\about.txt" />
+    <None Include="Assets\TileSet\ps1\public-license.txt" />
+    <None Include="Assets\TileSet\ps1\PixelPlatefomerSet2\public-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\Unity 2022.3.37f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
       <Private>False</Private>
