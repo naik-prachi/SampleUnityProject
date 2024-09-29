@@ -5,6 +5,14 @@ using TMPro;
 
 public class PlayerMovements : MonoBehaviour
 {
+
+    // Start() variables
+
+    // FSM 
+
+    // Inspector variables
+    [SerializeField] private float hurtForce = 0.1f;
+
     // player body
     private Rigidbody2D rb;
 
@@ -135,6 +143,35 @@ public class PlayerMovements : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         state = State.jumping;
+    }
+
+    // for the collision with the enemy
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            if (state == State.falling)
+            {
+                Destroy(other.gameObject);
+                Jump();
+            }
+            else
+            {
+                state = State.hurt;
+                // Destroy(gameObject);
+                if (other.gameObject.transform.position.x > transform.position.x)
+                {
+                    // enemy to my right --> player damaged and move left
+                    rb.velocity = new Vector2(-hurtForce, rb.velocity.y);
+                }
+                else
+                {
+                    // enemy to my left --> player damaged and move right
+                    rb.velocity = new Vector2(hurtForce, rb.velocity.y);
+                }
+            }
+
+        }
     }
 
 }
