@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdae5025a617a1047941bb1bfc95ba46
+guid: f2bfc23da852190469ea97fb3d50cc06
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,43 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainChar - jump(start)_0
+      name: MainChar - jump(landing)_0
       rect:
         serializedVersion: 2
-        x: 80
-        y: 33
-        width: 43
+        x: 82
+        y: 32
+        width: 50
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e57bf7732b32684893db451b34b24ec
-      internalID: -1784298040
+      spriteID: f72aa913351c7c74f8eedd5e1ee4ac01
+      internalID: -417636734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - jump(start)_1
+      name: MainChar - jump(landing)_1
       rect:
         serializedVersion: 2
-        x: 272
-        y: 34
-        width: 42
-        height: 59
+        x: 274
+        y: 32
+        width: 50
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d877d9336c04eb442bf461e50c279a3e
-      internalID: -1643231203
+      spriteID: 18e9f35b0bce8b24bb38bc99b8c39102
+      internalID: 52206513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - jump(landing)_2
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 32
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82f6a7ad269e7843a8a90da49bf3d14
+      internalID: -2034796335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - jump(landing)_3
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 32
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07cb511df556714fbf5112fb855f6fe
+      internalID: 552130337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - jump(landing)_4
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 32
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abf813975f9480469a4613dcdb483d4
+      internalID: -1984567724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainChar - jump(landing)_5
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 32
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23e19090db6f224abedbb7aa3ae6aee
+      internalID: 818855434
       vertices: []
       indices: 
       edges: []
@@ -162,8 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MainChar - jump(start)_0: -1784298040
-      MainChar - jump(start)_1: -1643231203
+      MainChar - jump(landing)_0: -417636734
+      MainChar - jump(landing)_1: 52206513
+      MainChar - jump(landing)_2: -2034796335
+      MainChar - jump(landing)_3: 552130337
+      MainChar - jump(landing)_4: -1984567724
+      MainChar - jump(landing)_5: 818855434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

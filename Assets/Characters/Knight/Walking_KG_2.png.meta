@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a07c6268f6a68874596f6ff96252a81b
+guid: 22f4a07b41d228f41b5cb65fcc49abd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainChar - jump(end)_0
+      name: Walking_KG_2_0
       rect:
         serializedVersion: 2
-        x: 82
-        y: 35
-        width: 40
-        height: 58
+        x: 0
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8190a99e83ede7a4a87a15918d017edb
-      internalID: 1483906522
+      spriteID: 0fcab2b9535b1f247898c3cee011c826
+      internalID: -596924288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - jump(end)_1
+      name: Walking_KG_2_1
       rect:
         serializedVersion: 2
-        x: 272
-        y: 34
-        width: 48
-        height: 58
+        x: 100
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c2f92f0ee7809244b69f8894ac8e8c8
-      internalID: 245377888
+      spriteID: bab409360fa9f3a4dbcf71a46a1bc03c
+      internalID: 1094720560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - jump(end)_2
+      name: Walking_KG_2_2
       rect:
         serializedVersion: 2
-        x: 464
-        y: 34
-        width: 50
-        height: 58
+        x: 200
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b011f949f1d5794e8fa101131946a1c
-      internalID: 31633661
+      spriteID: d71b56ca28e300248bc6fbdb00563c59
+      internalID: -713061637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainChar - jump(end)_3
+      name: Walking_KG_2_3
       rect:
         serializedVersion: 2
-        x: 656
-        y: 35
-        width: 48
-        height: 58
+        x: 300
+        y: 0
+        width: 100
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 224b923f1ada848478b7421351e9fabd
-      internalID: 2006281069
+      spriteID: 7e6e459b4bb7ccd4cac860297804a46a
+      internalID: -958887772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walking_KG_2_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9e302cbff8ba64bbd15ca714299196
+      internalID: 948959757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walking_KG_2_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352634493d463ac4f9139f2f525ab3e3
+      internalID: 1751646890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walking_KG_2_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef269f9067027340a85915989648c02
+      internalID: 1362180241
       vertices: []
       indices: 
       edges: []
@@ -204,10 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MainChar - jump(end)_0: 1483906522
-      MainChar - jump(end)_1: 245377888
-      MainChar - jump(end)_2: 31633661
-      MainChar - jump(end)_3: 2006281069
+      Walking_KG_2_0: -596924288
+      Walking_KG_2_1: 1094720560
+      Walking_KG_2_2: -713061637
+      Walking_KG_2_3: -958887772
+      Walking_KG_2_4: 948959757
+      Walking_KG_2_5: 1751646890
+      Walking_KG_2_6: 1362180241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
