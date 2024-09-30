@@ -11,7 +11,7 @@ public class PlayerMovements : MonoBehaviour
     // FSM 
 
     // Inspector variables
-    [SerializeField] private float hurtForce = 0.1f;
+    [SerializeField] private float hurtForce;
 
     // player body
     private Rigidbody2D rb;
