@@ -32,6 +32,8 @@ public class PlayerMovements : MonoBehaviour
     // state finite system
     private enum State { idle, running, jumping, falling, hurt };
     private State state = State.idle;
+    public int health = 100;
+
 
     // Start is called before the first frame update
     void Start()
@@ -173,5 +175,24 @@ public class PlayerMovements : MonoBehaviour
 
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        // Handle player's death
+        Debug.Log("Player died!");
+        // You can add death animations or restart the level here
+        Destroy(gameObject);  // Remove the player from the game
+    }
+
 
 }
