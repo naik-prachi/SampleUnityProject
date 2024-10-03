@@ -3,44 +3,39 @@ using UnityEngine;
 
 public class BombSpawner : MonoBehaviour
 {
-    public GameObject bombPrefab;  // Reference to the bomb prefab
-    public Vector2 spawnAreaMin;   // Bottom-left corner of the spawn area
-    public Vector2 spawnAreaMax;   // Top-right corner of the spawn area
-    public float spawnInterval = 2f;  // Interval between bomb spawns in seconds
-    public int bombsPerInterval = 2;  // Number of bombs to spawn every interval
+    public GameObject bombPrefab;
+    public float spawnRate = 2.0f;
+    public Camera mainCamera;
 
     void Start()
     {
-        // Start the coroutine to spawn bombs continuously
-        StartCoroutine(SpawnBombsOverTime());
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+        }
+        InvokeRepeating("SpawnBomb", 0f, spawnRate);
     }
 
-    // Coroutine to spawn bombs repeatedly
-    IEnumerator SpawnBombsOverTime()
+    void SpawnBomb()
     {
-        while (true)  // Infinite loop for continuous spawning
+        if (bombPrefab != null)
         {
-            // Spawn the specified number of bombs
-            for (int i = 0; i < bombsPerInterval; i++)
-            {
-                SpawnBomb();
-            }
-
-            // Wait for the specified interval before spawning again
-            yield return new WaitForSeconds(spawnInterval);
+            Vector2 spawnPosition = GetSpawnPositionAtTop();
+            Vector3 bombPosition = new Vector3(spawnPosition.x,spawnPosition.y, -1.26f);
+            Instantiate(bombPrefab, bombPosition, Quaternion.identity);
         }
     }
 
-    // Function to spawn a bomb at a random position within the spawn area
-    void SpawnBomb()
+    Vector2 GetSpawnPositionAtTop()
     {
-        // Generate a random position within the defined spawn area
-        Vector2 spawnPosition = new Vector2(
-            Random.Range(spawnAreaMin.x, spawnAreaMax.x),
-            Random.Range(spawnAreaMin.y, spawnAreaMax.y)
-        );
+        // Get the camera's viewport bounds
+        float cameraHeight = 2f * mainCamera.orthographicSize;
+        float cameraWidth = cameraHeight * mainCamera.aspect;
 
-        // Instantiate the bomb at the random position with no rotation
-        Instantiate(bombPrefab, spawnPosition, Quaternion.identity);
-    }
+        // Spawn position should be at the top edge of the camera view
+        float spawnX = Random.Range(-cameraWidth / 2, cameraWidth / 2);
+        float spawnY = mainCamera.orthographicSize + 1; // Adjust as needed to position bombs slightly above the top edge
+
+        return new Vector2(spawnX, spawnY);
+    }
 }
