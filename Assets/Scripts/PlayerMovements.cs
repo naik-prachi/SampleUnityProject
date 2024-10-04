@@ -18,7 +18,7 @@ public class PlayerMovements : MonoBehaviour
 
     // movement speed
     private float movementForce = 3f;
-    private float jumpForce = 5f;
+    private float jumpForce = 8f;
 
     // the ground layers have collider2d
     private Collider2D coll;
@@ -143,6 +143,24 @@ public class PlayerMovements : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         state = State.jumping;
+    }
+
+
+    // trigger on coin collision
+    private async void OnTriggerEnter2D(Collider2D other)
+    {
+        // if the player hits the coin, inc coin & destroy the coin
+        if (other.gameObject.CompareTag("Gems"))
+        {
+            Destroy(other.gameObject);
+
+        }
+
+        // if the player hits the saw, destroy the player
+        // if (other.gameObject.CompareTag("Trap"))
+        // {
+        //     Destroy(rb.gameObject);
+        // }
     }
 
     // for the collision with the enemy
