@@ -11,18 +11,12 @@ public class MovingPlatform : MonoBehaviour
     int direction = 1;
     public float speed = 0.2f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
         Vector2 target = CurrentMovementTarget();
 
-        platform.position = Vector2.Lerp(platform.position, target, speed = Time.deltaTime);
+        platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
 
         float distance = (target - (Vector2)platform.position).magnitude;
 
@@ -37,15 +31,16 @@ public class MovingPlatform : MonoBehaviour
         if (direction == 1)
         {
             // move to endPoint
-            return startPoint.position;
+            return endPoint.position;
         }
         else
         {
-            return endPoint.position;
+            // move to startPoint
+            return startPoint.position;
         }
     }
 
-    private void OnDragGizmos()
+    private void OnDrawGizmos()
     {
         // just for Debug visualisation
         if (platform != null && startPoint != null && endPoint != null)

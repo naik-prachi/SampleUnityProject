@@ -22,7 +22,7 @@ public class PlayerMovements : MonoBehaviour
 
 
     // movement speed
-    private float movementForce = 3f;
+    private float movementForce = 5f;
     private float jumpForce = 8f;
     private float dirX, dirY;
     public bool ClimbingAllowed { get; set; }
@@ -39,6 +39,15 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // for climbing the ladder
+        dirX = Input.GetAxisRaw("Horizontal") * movementForce;
+        if (ClimbingAllowed)
+        {
+            dirY = Input.GetAxisRaw("Vertical") * movementForce;
+            Debug.Log($"Climbing: dirY = {dirY}"); // Log dirY value
+        }
+
         // if not hurt, movement is allowed
         if (state != State.hurt)
         {
@@ -48,24 +57,19 @@ public class PlayerMovements : MonoBehaviour
         AnimationState();
         anim.SetInteger("state", (int)state);
 
-        // for climbing the ladder
-        dirX = Input.GetAxisRaw("Horizontal") * movementForce;
-        if (ClimbingAllowed)
-        {
-            dirY = Input.GetAxisRaw("Vertical") * movementForce;
-        }
     }
 
 
-    private void FixedUpdate(){
+    private void FixedUpdate()
+    {
         if (ClimbingAllowed)
         {
-            rb.isKinetic = true;
+            rb.isKinematic = true;
             rb.velocity = new Vector2(dirX, dirY);
         }
         else
         {
-            rb.isKinetic = false;
+            rb.isKinematic = false;
             rb.velocity = new Vector2(dirX, rb.velocity.y);
         }
     }
@@ -98,6 +102,10 @@ public class PlayerMovements : MonoBehaviour
         {
             // moving
             state = State.running;
+        }
+        else if (ClimbingAllowed)
+        {
+            state = State.climbing;
         }
         else
         {
@@ -207,5 +215,7 @@ public class PlayerMovements : MonoBehaviour
 
         }
     }
+
+
 
 }

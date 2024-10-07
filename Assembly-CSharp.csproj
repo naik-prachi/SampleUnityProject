@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\PlayerMovements.cs" />
+    <Compile Include="Assets\Scripts\EnemyGFX.cs" />
     <Compile Include="Assets\MovingBG.cs" />
     <Compile Include="Assets\Scripts\LadderClimbing.cs" />
     <Compile Include="Assets\mhk.cs" />

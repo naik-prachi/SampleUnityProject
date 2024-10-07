@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PlayerMovements;
+using static PlayerMovements;
+using static LadderClimbing;
 
 public class LadderDetector : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class LadderDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Ladder>())
+        if (collision.GetComponent<LadderClimbing>())
         {
             player.ClimbingAllowed = true;
         }
@@ -25,7 +26,7 @@ public class LadderDetector : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<Ladder>())
+        if (collision.GetComponent<LadderClimbing>())
         {
             player.ClimbingAllowed = false;
         }
