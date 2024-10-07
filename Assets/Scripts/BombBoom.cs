@@ -19,7 +19,7 @@ public class BombBoom : MonoBehaviour
         timer = fuseTime;
         rb = GetComponent<Rigidbody2D>();
         // Play the fuse lit animation
-        animator.Play("boom 1");
+        animator.Play("bomb");
     }
 
     void Update()
@@ -62,8 +62,8 @@ public class BombBoom : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic; // Set Rigidbody2D to Kinematic to prevent any movement
 
         // Play explosion animation
-        // animator.Play("boom");
-        animator.SetTrigger("Explode");
+        animator.Play("boom");
+        // animator.SetTrigger("Explode");
 
         // Optionally, you can destroy the bomb after the animation has finished
         Destroy(gameObject, 0.5f); // Adjust the delay based on your animation length
