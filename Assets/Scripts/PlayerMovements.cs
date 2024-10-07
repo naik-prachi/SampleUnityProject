@@ -133,7 +133,7 @@ public class PlayerMovements : MonoBehaviour
         }
 
         // if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
-        if (Input.GetKeyDown(KeyCode.Space) )
+        if (Input.GetKeyDown(KeyCode.Space) && coll.IsTouchingLayers(ground))
         {
             Jump();
 
