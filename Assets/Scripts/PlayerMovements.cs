@@ -7,31 +7,26 @@ public class PlayerMovements : MonoBehaviour
 {
 
     // Start() variables
+    private Collider2D coll;        // the ground layers have collider2d
+    private Animator anim;          // animator
+    private Rigidbody2D rb;         // player body
 
     // FSM 
+    private enum State { idle, running, jumping, falling, hurt, climbing };
+    private State state = State.idle;
 
     // Inspector variables
     [SerializeField] private float hurtForce;
+    [SerializeField] private LayerMask ground;      // layer mask
 
-    // player body
-    private Rigidbody2D rb;
+
 
     // movement speed
-    private float movementForce = 3f;
-    private float jumpForce = 5f;
+    private float movementForce = 5f;
+    private float jumpForce = 8f;
+    private float dirX, dirY;
+    public bool ClimbingAllowed { get; set; }
 
-    // the ground layers have collider2d
-    private Collider2D coll;
-
-    // animator
-    private Animator anim;
-
-    // layer mask
-    [SerializeField] private LayerMask ground;
-
-    // state finite system
-    private enum State { idle, running, jumping, falling, hurt };
-    private State state = State.idle;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +39,15 @@ public class PlayerMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        // for climbing the ladder
+        dirX = Input.GetAxisRaw("Horizontal") * movementForce;
+        if (ClimbingAllowed)
+        {
+            dirY = Input.GetAxisRaw("Vertical") * movementForce;
+            Debug.Log($"Climbing: dirY = {dirY}"); // Log dirY value
+        }
+
         // if not hurt, movement is allowed
         if (state != State.hurt)
         {
@@ -52,6 +56,22 @@ public class PlayerMovements : MonoBehaviour
 
         AnimationState();
         anim.SetInteger("state", (int)state);
+
+    }
+
+
+    private void FixedUpdate()
+    {
+        if (ClimbingAllowed)
+        {
+            rb.isKinematic = true;
+            rb.velocity = new Vector2(dirX, dirY);
+        }
+        else
+        {
+            rb.isKinematic = false;
+            rb.velocity = new Vector2(dirX, rb.velocity.y);
+        }
     }
 
     // state finite system
@@ -82,6 +102,10 @@ public class PlayerMovements : MonoBehaviour
         {
             // moving
             state = State.running;
+        }
+        else if (ClimbingAllowed)
+        {
+            state = State.climbing;
         }
         else
         {
@@ -145,6 +169,24 @@ public class PlayerMovements : MonoBehaviour
         state = State.jumping;
     }
 
+
+    // trigger on coin collision
+    private async void OnTriggerEnter2D(Collider2D other)
+    {
+        // if the player hits the coin, inc coin & destroy the coin
+        if (other.gameObject.CompareTag("Gems"))
+        {
+            Destroy(other.gameObject);
+
+        }
+
+        // if the player hits the saw, destroy the player
+        // if (other.gameObject.CompareTag("Trap"))
+        // {
+        //     Destroy(rb.gameObject);
+        // }
+    }
+
     // for the collision with the enemy
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -173,5 +215,7 @@ public class PlayerMovements : MonoBehaviour
 
         }
     }
+
+
 
 }
