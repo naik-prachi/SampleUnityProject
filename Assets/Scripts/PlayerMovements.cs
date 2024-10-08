@@ -45,7 +45,6 @@ public class PlayerMovements : MonoBehaviour
         if (ClimbingAllowed)
         {
             dirY = Input.GetAxisRaw("Vertical") * movementForce;
-            Debug.Log($"Climbing: dirY = {dirY}"); // Log dirY value
         }
 
         // if not hurt, movement is allowed
