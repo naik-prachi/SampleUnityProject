@@ -12,7 +12,7 @@ public class PlayerMovements : MonoBehaviour
     private Rigidbody2D rb;         // player body
 
     // FSM 
-    private enum State { idle, running, jumping, falling, hurt, climbing };
+    private enum State { idle, running, jumping, falling, hurt, climbing, dirX, dirY};
     private State state = State.idle;
 
     // Inspector variables
@@ -24,19 +24,6 @@ public class PlayerMovements : MonoBehaviour
     // movement speed
     private float movementForce = 3f;
     private float jumpForce = 5f;
-
-    // the ground layers have collider2d
-    private Collider2D coll;
-
-    // animator
-    private Animator anim;
-
-    // layer mask
-    [SerializeField] private LayerMask ground;
-
-    // state finite system
-    private enum State { idle, running, jumping, falling, hurt };
-    private State state = State.idle;
 
     // Start is called before the first frame update
     void Start()

@@ -31,7 +31,7 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void game_over() {
-        SceneManagement.LoadScene("gameover");
+        SceneManager.LoadScene("gameover");
         Debug.Log("Game Over");
     }
 }
