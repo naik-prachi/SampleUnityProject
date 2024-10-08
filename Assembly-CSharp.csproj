@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\PlayerMovements.cs" />
     <Compile Include="Assets\MovingBG.cs" />
     <Compile Include="Assets\mhk.cs" />
+    <Compile Include="Assets\Scripts\BombSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TileSet\DarkForest\about.txt" />
