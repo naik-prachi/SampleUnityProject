@@ -12,7 +12,7 @@ public class PlayerMovements : MonoBehaviour
     private Rigidbody2D rb;         // player body
 
     // FSM 
-    private enum State { idle, running, jumping, falling, hurt, climbing, dirX, dirY};
+    private enum State { idle, running, jumping, falling, hurt, climbing};
     private State state = State.idle;
 
     // Inspector variables
@@ -20,6 +20,9 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private LayerMask ground;      // layer mask
 
 
+    public float dirX, dirY;
+
+    public bool ClimbingAllowed { get; set; }
 
     // movement speed
     private float movementForce = 3f;
