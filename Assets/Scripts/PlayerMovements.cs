@@ -188,7 +188,7 @@ public class PlayerMovements : MonoBehaviour
 
 
     // trigger on coin collision
-    private async void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         // if the player hits the coin, inc coin & destroy the coin
         if (other.gameObject.CompareTag("Gems"))
@@ -198,10 +198,10 @@ public class PlayerMovements : MonoBehaviour
         }
 
         // if the player hits the saw, destroy the player
-        // if (other.gameObject.CompareTag("Trap"))
-        // {
-        //     Destroy(rb.gameObject);
-        // }
+        if (other.GetComponent<Collider>().tag == "Trap")
+        {
+            Destroy(gameObject);
+        }
     }
 
     // for the collision with the enemy
