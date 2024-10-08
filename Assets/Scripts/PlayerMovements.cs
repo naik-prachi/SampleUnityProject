@@ -18,7 +18,7 @@ public class PlayerMovements : MonoBehaviour
 
     // movement speed
     private float movementForce = 3f;
-    private float jumpForce = 5f;
+    private float jumpForce = 8f;
 
     // the ground layers have collider2d
     private Collider2D coll;
