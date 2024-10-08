@@ -26,21 +26,21 @@ public class PlayerMovements : MonoBehaviour
     private float jumpForce = 8f;
 
     // the ground layers have collider2d
-    private Collider2D coll;
+    // private Collider2D coll;
 
-    // animator
-    private Animator anim;
+    // // animator
+    // private Animator anim;
 
-    // layer mask
-    [SerializeField] private LayerMask ground;
+    // // layer mask
+    // [SerializeField] private LayerMask ground;
 
-    // state finite system
-    private enum State { idle, running, jumping, falling, hurt };
-    private State state = State.idle;
+    // // state finite system
+    // private enum State { idle, running, jumping, falling, hurt };
+    // private State state = State.idle;
     public int health = 100;
 
-    private float movementForce = 5f;
-    private float jumpForce = 8f;
+    // private float movementForce = 5f;
+    // private float jumpForce = 8f;
     private float dirX, dirY;
     public bool ClimbingAllowed { get; set; }
 
