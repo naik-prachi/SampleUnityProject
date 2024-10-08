@@ -144,10 +144,10 @@ public class PlayerMovements : MonoBehaviour
             // run animation
 
         }
-        // else if (Input.GetKey(KeyCode.S) || Input.GetKey("down"))
-        // {
-        //     rb.velocity = new Vector2(0, rb.velocity.y);
-        // }
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey("down"))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
 
         else
         {

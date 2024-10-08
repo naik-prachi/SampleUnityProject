@@ -65,6 +65,7 @@
     <Compile Include="Assets\MovingBG.cs" />
     <Compile Include="Assets\Scripts\LadderClimbing.cs" />
     <Compile Include="Assets\mhk.cs" />
+    <Compile Include="Assets\Scripts\EnemyLvl3.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\LadderDetector.cs" />
   </ItemGroup>
