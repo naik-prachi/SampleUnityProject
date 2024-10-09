@@ -19,7 +19,8 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] private float hurtForce;
     [SerializeField] private LayerMask ground;      // layer mask
 
-
+    // Score instance
+    [SerializeField] public Score sc;
 
     // movement speed
     private float movementForce = 3f;
@@ -194,6 +195,7 @@ public class PlayerMovements : MonoBehaviour
         if (other.gameObject.CompareTag("Gems"))
         {
             Destroy(other.gameObject);
+            sc.Addscore();
 
         }
 
