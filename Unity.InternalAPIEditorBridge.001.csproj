@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PackageToolsEditor</AssemblyName>
+    <AssemblyName>Unity.InternalAPIEditorBridge.001</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -63,12 +63,18 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.common@8.0.2\Editor\InternalBridge\TexturePlatformSettings\TexturePlatformSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@1.1.4\Editor\Common\InternalBridge\TexturePlatformSettings\TexturePlatformSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@1.1.4\Editor\Common\InternalBridge\ModelPreviewer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.common@8.0.2\Editor\InternalBridge\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@1.1.4\Editor\Common\InternalBridge\InternalEditorBridge.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.common@8.0.2\Editor\InternalBridge\InternalEditorBridge.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@1.1.4\Editor\Common\InternalBridge\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.aseprite@1.1.4\Editor\Common\InternalBridge\AnimatorControllerHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.2d.aseprite@1.1.4\Editor\Common\InternalBridge\InternalBridgeRef.asmref" />
+    <None Include="Library\PackageCache\com.unity.2d.common@8.0.2\Editor\InternalBridge\InternalBridgeDef.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1109,7 +1115,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProject.csproj" />
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj" />
     <ProjectReference Include="UnityEditor.UI.csproj" />
     <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />

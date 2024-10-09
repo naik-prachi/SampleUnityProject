@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PackageToolsEditor</AssemblyName>
+    <AssemblyName>Unity.2D.Tilemap.Extras.Editor</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -63,12 +63,22 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Brushes\LineBrush\LineBrush.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Brushes\RandomBrush\RandomBrush.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Menu\CustomRuleTileMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Tiles\AnimatedTile\AnimatedTileEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Brushes\GroupBrush\GroupBrush.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Menu\MenuItemOrder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1109,7 +1119,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProject.csproj" />
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj" />
+    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj" />
     <ProjectReference Include="UnityEditor.UI.csproj" />
     <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />

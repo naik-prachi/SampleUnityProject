@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PackageToolsEditor</AssemblyName>
+    <AssemblyName>Unity.Burst.Editor</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,7 +41,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoStandardLibraries>true</NoStandardLibraries>
@@ -63,12 +63,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstInspectorGUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.Wasm.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.LLVMIR.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.LLVMIR.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstPlatformAotSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.ARM64.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\LongTextArea.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.ARM64.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstStringSearch.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.Wasm.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.x86.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstAotCompiler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstLoader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\LabeledPopup.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstDisassembler.Core.x86.info.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstMath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\BurstMenu.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.burst@1.8.16\Editor\Unity.Burst.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1109,7 +1125,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProject.csproj" />
+    <ProjectReference Include="Unity.Burst.csproj" />
     <ProjectReference Include="UnityEditor.UI.csproj" />
     <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />

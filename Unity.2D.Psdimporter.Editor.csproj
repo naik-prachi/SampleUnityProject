@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PackageToolsEditor</AssemblyName>
+    <AssemblyName>Unity.2D.Psdimporter.Editor</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,7 +41,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoStandardLibraries>true</NoStandardLibraries>
@@ -63,12 +63,42 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDLayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDLayerMappingStrategy.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporterAssetPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporterEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\UTK\ImportColumnHeaderToggle.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\UTK\PSDImporterMultiColumnTreeViewUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImportData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDGameObjectPreviewData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporterAPI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImportPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\TexturePlatformSettingsController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\UTK\UIColumn.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\TexturePlatformSettingsView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\Tasks\FlattenImageTask.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\ImportUtilites.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\Analytics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\UTK\ImportColumn.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\SpriteData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\Pipeline.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\UTK\LayerNameColumn.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\TexturePlatformSettingsModal.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporterDataProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\TextureSettingsGUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\Tasks\ExtractLayerTask.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\TextureImporterUtilities.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporterEditorExternalData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\TextContent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDSpriteEditorDataProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\UTK\Tooltips.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\PSDImporterEditorLayerTreeView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\Assets\UI\PSDImporterStyleSheet.uss" />
+    <None Include="Library\PackageCache\com.unity.2d.psdimporter@8.0.5\Editor\Unity.2D.Psdimporter.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1109,7 +1139,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProject.csproj" />
+    <ProjectReference Include="PsdPlugin.csproj" />
+    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj" />
+    <ProjectReference Include="Unity.2D.Common.Editor.csproj" />
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj" />
+    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj" />
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj" />
+    <ProjectReference Include="Unity.Mathematics.csproj" />
+    <ProjectReference Include="Unity.Burst.csproj" />
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj" />
     <ProjectReference Include="UnityEditor.UI.csproj" />
     <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />

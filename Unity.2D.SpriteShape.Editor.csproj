@@ -19,7 +19,7 @@
     <RootNamespace></RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PackageToolsEditor</AssemblyName>
+    <AssemblyName>Unity.2D.SpriteShape.Editor</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -63,12 +63,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EnumFlagDrawer.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorGUIx.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\PackageTools\Editor\EditorBase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeEditorTool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\AngleRangeController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\EditorSpriteGUIUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeAnalytics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeControllerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeAssetPostProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteSelector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeHandleUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeEditorAnalytics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SceneDragAndDrop.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\AngleRangeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\ObjectMenuCreation\AssetCreation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeEditorUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\SpriteShapeEditorGUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\ObjectMenuCreation\GameObjectCreation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\AngleRangeGUI.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\AstarPathfindingProject\PackageTools\Editor\PackageToolsEditor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\Handles\Shaders\Sprites-Inspector.shader" />
+    <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.3\Editor\Unity.2D.SpriteShape.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1109,7 +1125,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProject.csproj" />
+    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj" />
+    <ProjectReference Include="Unity.2D.Common.Editor.csproj" />
+    <ProjectReference Include="Unity.2D.Common.Runtime.csproj" />
+    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj" />
+    <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj" />
     <ProjectReference Include="UnityEditor.UI.csproj" />
     <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="UnityEditor.TestRunner.csproj" />
