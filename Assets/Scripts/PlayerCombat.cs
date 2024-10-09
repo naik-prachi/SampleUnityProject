@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
 {
@@ -78,7 +79,27 @@ public class PlayerCombat : MonoBehaviour
         this.enabled = false;
 
         // destroy the GameObject after a delay (optional)
-        Destroy(gameObject, 2f); 
+        // Destroy(gameObject, 2f);
+
+        // load the ending scene
+        // SceneManager.LoadScene("EndingScene");
+        // Start the coroutine to wait for the animation
+        StartCoroutine(WaitForAnimationAndLoadScene());
+    }
+
+    private IEnumerator WaitForAnimationAndLoadScene()
+    {
+        // Wait until the death animation is completed
+        // Assuming your death animation is 1 second long (adjust if necessary)
+        // yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        // Wait for 2 seconds
+        yield return new WaitForSeconds(2f);
+
+        // Destroy the GameObject
+        Destroy(gameObject, 2f);
+
+        // Load the ending scene
+        SceneManager.LoadScene("EndingScene");
     }
 
     void OnDrawGizmosSelected()

@@ -78,6 +78,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\EnemyGFX.cs" />
+    <Compile Include="Assets\Scripts\RetryGame.cs" />
     <Compile Include="Assets\Scripts\MovingBG.cs" />
     <Compile Include="Assets\Scripts\LadderClimbing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />

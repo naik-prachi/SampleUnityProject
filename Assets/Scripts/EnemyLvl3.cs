@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyLvl3 : MonoBehaviour
 {
     //  enemy animator
@@ -70,6 +71,9 @@ public class EnemyLvl3 : MonoBehaviour
         // destroy the GameObject after a delay (optional)
         Destroy(gameObject, 1f); // Adjust the delay as needed
 
+        // load the ending scene
+        // SceneManager.LoadScene("EndingScene");
+
     }
 
     void Attack(PlayerCombat playerHealth)
@@ -79,4 +83,6 @@ public class EnemyLvl3 : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
     }
+
+
 }
