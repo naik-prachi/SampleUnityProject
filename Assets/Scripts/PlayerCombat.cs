@@ -78,7 +78,7 @@ public class PlayerCombat : MonoBehaviour
         this.enabled = false;
 
         // destroy the GameObject after a delay (optional)
-        Destroy(gameObject, 1f); 
+        Destroy(gameObject, 2f); 
     }
 
     void OnDrawGizmosSelected()
