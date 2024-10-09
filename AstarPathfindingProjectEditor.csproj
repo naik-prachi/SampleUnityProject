@@ -613,12 +613,12 @@
       <HintPath>Library\PackageCache\com.nethereum.unity@365953edce\Runtime\Nethereum.Contracts.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Nethereum.ABI">
-      <HintPath>Library\PackageCache\com.nethereum.unity@365953edce\Runtime\Nethereum.ABI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
       <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nethereum.ABI">
+      <HintPath>Library\PackageCache\com.nethereum.unity@365953edce\Runtime\Nethereum.ABI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">

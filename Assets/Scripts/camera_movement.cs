@@ -13,7 +13,16 @@ public class camera_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPosition = target.position + offset;
+        Vector3 targetPosition = new Vector3(
+            Mathf.Clamp(target.position.x,-2.8f,14.4f),
+            Mathf.Clamp(target.position.y,0.1f,44.5f),
+            transform.position.z
+        );
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        // transform.position = new Vector3(
+        //     Mathf.Clamp(target.position.x,-2.8f,14.4f),
+        //     Mathf.Clamp(target.position.y,0.1f,44.5f),
+        //     transform.position.z
+        // );
     }
 }
