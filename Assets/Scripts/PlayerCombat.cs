@@ -23,7 +23,5 @@ public class PlayerCombat : MonoBehaviour
         anim.SetTrigger("Attack");
 
         // Detect enemies in range of attack
-
-        // Disable them
     }
 }

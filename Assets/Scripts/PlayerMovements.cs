@@ -22,8 +22,25 @@ public class PlayerMovements : MonoBehaviour
 
 
     // movement speed
-    private float movementForce = 5f;
+    private float movementForce = 3f;
     private float jumpForce = 8f;
+
+    // the ground layers have collider2d
+    // private Collider2D coll;
+
+    // // animator
+    // private Animator anim;
+
+    // // layer mask
+    // [SerializeField] private LayerMask ground;
+
+    // // state finite system
+    // private enum State { idle, running, jumping, falling, hurt };
+    // private State state = State.idle;
+    public int health = 100;
+
+    // private float movementForce = 5f;
+    // private float jumpForce = 8f;
     private float dirX, dirY;
     public bool ClimbingAllowed { get; set; }
 
@@ -171,7 +188,7 @@ public class PlayerMovements : MonoBehaviour
 
 
     // trigger on coin collision
-    private async void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         // if the player hits the coin, inc coin & destroy the coin
         if (other.gameObject.CompareTag("Gems"))
@@ -181,10 +198,10 @@ public class PlayerMovements : MonoBehaviour
         }
 
         // if the player hits the saw, destroy the player
-        // if (other.gameObject.CompareTag("Trap"))
-        // {
-        //     Destroy(rb.gameObject);
-        // }
+        if (other.GetComponent<Collider>().tag == "Trap")
+        {
+            Destroy(gameObject);
+        }
     }
 
     // for the collision with the enemy
@@ -215,6 +232,25 @@ public class PlayerMovements : MonoBehaviour
 
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        // Handle player's death
+        Debug.Log("Player died!");
+        // You can add death animations or restart the level here
+        Destroy(gameObject);  // Remove the player from the game
+    }
+
 
 
 

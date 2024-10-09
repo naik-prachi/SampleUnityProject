@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Bomb
   - Gems
+  - Public Key
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Spawn
   - 
   - 
   - 
@@ -42,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2121574573
+    locked: 0
+  - name: Entity
+    uniqueID: 2891652809
+    locked: 0
+  - name: Foreground
+    uniqueID: 841322365
     locked: 0

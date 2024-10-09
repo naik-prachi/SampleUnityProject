@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.nethereum.unity": {
+      "version": "https://github.com/Nethereum/Nethereum.Unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "365953edce22abdcca4a05db0ba0ff3786dd905e"
+    },
     "com.unity.2d.animation": {
       "version": "9.1.1",
       "depth": 1,
