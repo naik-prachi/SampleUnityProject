@@ -206,6 +206,8 @@ public class PlayerMovements : MonoBehaviour
             Destroy(other.gameObject);
             // Destroy(collision.gameObject);
             gems += 1;
+            PlayerPrefs.SetInt("Score",gems);
+            PlayerPrefs.Save();
             gemtext.text = gems.ToString();
 
         }
@@ -263,6 +265,7 @@ public class PlayerMovements : MonoBehaviour
         // You can add death animations or restart the level here
         Destroy(gameObject);  // Remove the player from the game
     }
+
 
 
 

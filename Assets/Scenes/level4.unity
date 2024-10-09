@@ -628,6 +628,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1498663661941714381, guid: 55024c753849fab449d0989d41875e42, type: 3}
+      propertyPath: gemtext
+      value: 
+      objectReference: {fileID: 3402470172514729701}
+    - target: {fileID: 1498663661941714381, guid: 55024c753849fab449d0989d41875e42, type: 3}
       propertyPath: ground.m_Bits
       value: 0
       objectReference: {fileID: 0}
