@@ -61,7 +61,7 @@ public class input_thing : MonoBehaviour
                     Debug.Log("Connected account: " + selectedAccount);
                     var balance = await web3.Eth.GetBalance.SendRequestAsync(selectedAccount);
                     Debug.Log("Balance: " + balance.Value);
-                    sce.level_one();
+                    sce.LoadLevel();
                     break;
                 }
                 else

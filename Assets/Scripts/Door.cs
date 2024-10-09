@@ -10,6 +10,9 @@ public class Door : MonoBehaviour
     private bool isOpen = false;
     private Animator animator; // Reference to the Animator
 
+    public levelcounter lv;
+    public int nextLevelnumber;
+
     private void Start()
     {
         // Get the Animator component attached to the door
@@ -34,6 +37,8 @@ public class Door : MonoBehaviour
 
             // Play the "OpenDoor" animation by triggering the parameter
             animator.SetTrigger("OpenDoor");
+
+            lv.NextLevel(nextLevelnumber);
 
             // Start the coroutine to load the next level after the animation
             StartCoroutine(LoadNextLevel());
