@@ -14,8 +14,8 @@ public class camera_movement : MonoBehaviour
     void Update()
     {
         Vector3 targetPosition = new Vector3(
-            Mathf.Clamp(target.position.x,-2.8f,14.4f),
-            Mathf.Clamp(target.position.y,0.1f,44.5f),
+            Mathf.Clamp(target.position.x,-1.9f,14.65f),
+            Mathf.Clamp(target.position.y,0f,44.1f),
             transform.position.z
         );
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
