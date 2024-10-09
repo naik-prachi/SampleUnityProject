@@ -198,7 +198,7 @@ public class PlayerMovements : MonoBehaviour
         }
 
         // if the player hits the saw, destroy the player
-        if (other.GetComponent<Collider>().tag == "Trap")
+        if (other.gameObject.CompareTag("Trap"))
         {
             Destroy(gameObject);
         }

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.nethereum.unity": "https://github.com/Nethereum/Nethereum.Unity.git",
+    "com.nethereum.unity": "file:C:/Users/Lenovo/Downloads/Nethereum.Unity-main/Nethereum.Unity-main",
     "com.unity.cinemachine": "2.10.0",
     "com.unity.collab-proxy": "2.4.4",
     "com.unity.feature.2d": "2.0.1",
