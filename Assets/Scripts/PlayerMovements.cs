@@ -16,31 +16,19 @@ public class PlayerMovements : MonoBehaviour
     private State state = State.idle;
 
     // Inspector variables
-    [SerializeField] private float hurtForce;
+    // [SerializeField] 
     [SerializeField] private LayerMask ground;      // layer mask
 
 
 
     // movement speed
-    private float movementForce = 3f;
+    private float movementForce = 5f;
     private float jumpForce = 8f;
+    private float hurtForce = 20f;
 
-    // the ground layers have collider2d
-    // private Collider2D coll;
-
-    // // animator
-    // private Animator anim;
-
-    // // layer mask
-    // [SerializeField] private LayerMask ground;
-
-    // // state finite system
-    // private enum State { idle, running, jumping, falling, hurt };
-    // private State state = State.idle;
     public int health = 100;
 
-    // private float movementForce = 5f;
-    // private float jumpForce = 8f;
+    // to climb the ladder
     private float dirX, dirY;
     public bool ClimbingAllowed { get; set; }
 
@@ -62,7 +50,6 @@ public class PlayerMovements : MonoBehaviour
         if (ClimbingAllowed)
         {
             dirY = Input.GetAxisRaw("Vertical") * movementForce;
-            Debug.Log($"Climbing: dirY = {dirY}"); // Log dirY value
         }
 
         // if not hurt, movement is allowed
@@ -198,7 +185,8 @@ public class PlayerMovements : MonoBehaviour
         }
 
         // if the player hits the saw, destroy the player
-        if (other.GetComponent<Collider>().tag == "Trap")
+        // if (other.GetComponent<Collider>().tag == "Trap")
+        if (other.gameObject.CompareTag("Trap"))
         {
             Destroy(gameObject);
         }
