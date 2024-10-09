@@ -26,7 +26,9 @@ public class PlayerMovements : MonoBehaviour
     private float jumpForce = 8f;
     private float hurtForce = 20f;
 
-    public int health = 100;
+    // player health
+    private int currentHealth;
+    public int maxHealth = 100;
 
     // to climb the ladder
     private float dirX, dirY;
@@ -39,6 +41,9 @@ public class PlayerMovements : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+
+        // player health
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -223,9 +228,12 @@ public class PlayerMovements : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currentHealth -= damage;
 
-        if (health <= 0)
+        // play hurt animation
+        // anim.SetTrigger("Hurt");
+
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -235,6 +243,14 @@ public class PlayerMovements : MonoBehaviour
     {
         // Handle player's death
         Debug.Log("Player died!");
+
+        // play death animation
+        anim.SetBool("IsDead", true);
+
+        // disable the enemy
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+
         // You can add death animations or restart the level here
         Destroy(gameObject);  // Remove the player from the game
     }

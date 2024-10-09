@@ -42718,6 +42718,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 2125320387}
   maxHealth: 100
+  damage: 10
+  attackRange: 1.5
+  attackCooldown: 2
 --- !u!4 &866603842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5350449771218009969, guid: 22575608d7902a64286e9869cc4d45d5, type: 3}
@@ -50980,6 +50983,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1006002137}
   maxHealth: 100
+  damage: 10
+  attackRange: 1.5
+  attackCooldown: 2
 --- !u!1001 &1836753642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50994,11 +51000,11 @@ PrefabInstance:
       objectReference: {fileID: 4773045923496752261}
     - target: {fileID: 4327736770607328522, guid: d90830968daa2f5428444a25db0c1991, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 43.94
       objectReference: {fileID: 0}
     - target: {fileID: 4327736770607328522, guid: d90830968daa2f5428444a25db0c1991, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 4327736770607328522, guid: d90830968daa2f5428444a25db0c1991, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56502,7 +56508,7 @@ PrefabInstance:
       objectReference: {fileID: 4773045923496752261}
     - target: {fileID: 4327736770607328522, guid: d90830968daa2f5428444a25db0c1991, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.11
+      value: -3.33
       objectReference: {fileID: 0}
     - target: {fileID: 4327736770607328522, guid: d90830968daa2f5428444a25db0c1991, type: 3}
       propertyPath: m_LocalPosition.y
