@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1498663661941714381}
   - component: {fileID: 1595852217304190463}
   - component: {fileID: 1783658005806999889}
+  - component: {fileID: 1031109738203499989}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -240,6 +241,7 @@ MonoBehaviour:
   attackRange: 0.5
   attackDamage: 40
   attackRate: 2
+  maxHealth: 100
 --- !u!114 &1498663661941714381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,11 +254,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b0cc60447c56b4eb5a5d1f84a2bbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtForce: 3.5
   ground:
     serializedVersion: 2
     m_Bits: 64
-  health: 100
+  privateKey: 0x7fd7a811d7260aa15724f57acf92bb12a5df118030136ccc05491867aa096274
+  recipientAddress: 0x97ef45EA531f797A19e88d7EE27C4ea170349eA3
+  balanceText: {fileID: 2331625903126082000, guid: c4948d405e02d4145a413864db9a803f, type: 3}
+  maxHealth: 100
+  gems: 0
+  gemtext: {fileID: 7158418790421758316, guid: 23c8ade70e847df48b0c4284ed139245, type: 3}
 --- !u!50 &1595852217304190463
 Rigidbody2D:
   serializedVersion: 4
@@ -329,3 +335,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47360516, y: 0.78964496}
   m_EdgeRadius: 0
+--- !u!114 &1031109738203499989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540314746260094793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bc1c83b117bc845ad0b634b0927197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 8540314746260094793}
