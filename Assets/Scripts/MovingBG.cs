@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class MovingBG : MonoBehaviour
 {
-  Material mat;
-    float distance;
+      public float scrollSpeed;
 
-    [Range(0f,0.5f)]
-    public float speed=0.045f;
+    private Renderer renderer;
+    private Vector2 savedOffset;
 
-    void Start()
-    {
-        mat = GetComponent<Renderer>().material;
-
+    void Start () {
+        renderer = GetComponent<Renderer> ();
     }
 
-    void Update()
-    {
-        distance += Time.deltaTime*speed;
-        mat.SetTextureOffset("_MainTex", Vector2.right * distance);
+    void Update () {
+	float x = Mathf.Repeat (Time.time * scrollSpeed, 1);
+	Vector2 offset = new Vector2 (x, 0);
+	renderer.sharedMaterial.SetTextureOffset("_MainTex", offset);
     }
 }
