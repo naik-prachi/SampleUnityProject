@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
+using Nethereum.Web3;
+using Nethereum.Web3.Accounts;
+using Nethereum.Hex.HexTypes;
+using System.Threading.Tasks;
+using Nethereum.Util;
 public class PlayerMovements : MonoBehaviour
 {
 
@@ -17,7 +22,12 @@ public class PlayerMovements : MonoBehaviour
 
     // Inspector variables
     [SerializeField] private float hurtForce;
-    [SerializeField] private LayerMask ground;      // layer mask
+    [SerializeField] private LayerMask ground;  
+    
+
+    [SerializeField] private int gems = 0;
+    [SerializeField] private Text gemtext;
+       // layer mask
 
 
 
@@ -194,6 +204,9 @@ public class PlayerMovements : MonoBehaviour
         if (other.gameObject.CompareTag("Gems"))
         {
             Destroy(other.gameObject);
+            // Destroy(collision.gameObject);
+            gems += 1;
+            gemtext.text = gems.ToString();
 
         }
 

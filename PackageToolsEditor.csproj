@@ -428,10 +428,6 @@
       <HintPath>C:\Users\Lenovo\Downloads\Nethereum.Unity-main\Nethereum.Unity-main\Runtime\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Nethereum.Mud.Contracts">
-      <HintPath>C:\Users\Lenovo\Downloads\Nethereum.Unity-main\Nethereum.Unity-main\Runtime\Nethereum.Mud.Contracts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Nethereum.Geth">
       <HintPath>C:\Users\Lenovo\Downloads\Nethereum.Unity-main\Nethereum.Unity-main\Runtime\Nethereum.Geth.dll</HintPath>
       <Private>False</Private>
@@ -502,6 +498,10 @@
     </Reference>
     <Reference Include="Nethereum.Web3">
       <HintPath>C:\Users\Lenovo\Downloads\Nethereum.Unity-main\Nethereum.Unity-main\Runtime\Nethereum.Web3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Nethereum.Mud.Contracts">
+      <HintPath>C:\Users\Lenovo\Downloads\Nethereum.Unity-main\Nethereum.Unity-main\Runtime\Nethereum.Mud.Contracts.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Nethereum.UI">
