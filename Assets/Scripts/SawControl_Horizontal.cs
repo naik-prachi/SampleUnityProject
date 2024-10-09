@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class SawControl : MonoBehaviour
+public class SawControl_Horizontal : MonoBehaviour
 {
 
     private float moveDistance;

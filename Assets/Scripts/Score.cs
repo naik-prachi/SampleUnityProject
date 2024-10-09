@@ -15,11 +15,12 @@ public class Score : MonoBehaviour
     }
 
     // void Update() {
-    //     Debug.Log(i);
+    //     Debug.Log(PlayerPrefs.GetInt("Score"));
     // }
 
     public void Addscore() {
         i += 1;
+        TransferScore();
         num.text = i.ToString();
     }
 
@@ -27,7 +28,7 @@ public class Score : MonoBehaviour
         PlayerPrefs.SetInt("Score",i);
     }
 
-    public void Resetscore() {
-        PlayerPrefs.SetInt("Score",0);
-    }
+    // public void Resetscore() {
+    //     PlayerPrefs.SetInt("Score",0);
+    // }
 }
