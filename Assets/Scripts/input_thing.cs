@@ -22,7 +22,7 @@ public class input_thing : MonoBehaviour
 
     // most of the part from connect wallet script
     private Web3 web3;
-    private string rpcUrl = "HTTP://127.0.0.1:8545";
+    private string rpcUrl = "HTTP://127.0.0.1:7545";
 
     private void Start(){
 

@@ -9,7 +9,7 @@ using TMPro;
 
 public class EthUpdate : MonoBehaviour
 {
-    public string privateKey = "0xa8304db76115697d5d193df573bc58c72d08cafc0558b5d6e9f0f00ebe8e088c"; // Replace with your private key
+    public string privateKey = "0x7d67731a16254baeddd322d8fb8f239520a33b69036eb8e4ae92557acaa9226a"; // Replace with your private key
     private string key;
     // private int i=0;
     public Button updateButton;
@@ -24,7 +24,7 @@ public class EthUpdate : MonoBehaviour
     {
         // Initialize Web3 instance
         var account = new Account(privateKey);
-        web3 = new Web3(account, "http://127.0.0.1:8545"); // Ganache default URL
+        web3 = new Web3(account, "http://127.0.0.1:7545"); // Ganache default URL
 
         // Get the account address from the private key
         accountAddress = account.Address;
