@@ -28,8 +28,9 @@ public class PlayerMovements : MonoBehaviour
     private float hurtForce = 20f;
 
     // player health
-    private int currentHealth;
-    public int maxHealth = 100;
+    public PlayerCombat playerHealth;
+    // private int currentHealth;
+    // public int maxHealth = 100;
 
     // to climb the ladder
     private float dirX, dirY;
@@ -44,7 +45,7 @@ public class PlayerMovements : MonoBehaviour
         coll = GetComponent<Collider2D>();
 
         // player health
-        currentHealth = maxHealth;
+        // currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -228,34 +229,34 @@ public class PlayerMovements : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
+//     public void TakeDamage(int damage)
+//     {
+//         currentHealth -= damage;
 
-        // play hurt animation
-        // anim.SetTrigger("Hurt");
+//         // play hurt animation
+//         // anim.SetTrigger("Hurt");
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
+//         if (currentHealth <= 0)
+//         {
+//             Die();
+//         }
+//     }
 
-    void Die()
-    {
-        // Handle player's death
-        Debug.Log("Player died!");
+//     void Die()
+//     {
+//         // Handle player's death
+//         Debug.Log("Player died!");
 
-        // play death animation
-        anim.SetBool("IsDead", true);
+//         // play death animation
+//         anim.SetBool("IsDead", true);
 
-        // disable the enemy
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+//         // disable the enemy
+//         GetComponent<Collider2D>().enabled = false;
+//         this.enabled = false;
 
-        // You can add death animations or restart the level here
-        Destroy(gameObject);  // Remove the player from the game
-    }
+//         // You can add death animations or restart the level here
+//         Destroy(gameObject);  // Remove the player from the game
+//     }
 
 
 

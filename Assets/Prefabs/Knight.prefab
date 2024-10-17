@@ -233,13 +233,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2983789838744492511}
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 7354768087546482057}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   attackRange: 0.5
-  attackDamage: 40
+  attackDamage: 20
   attackRate: 2
+  currentHealth: 0
+  healthManager: {fileID: 6762118642084969495, guid: 5fa3b5bb02ba7c5488ee10269e9fdf00, type: 3}
 --- !u!114 &1498663661941714381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,11 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b0cc60447c56b4eb5a5d1f84a2bbcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hurtForce: 3.5
   ground:
     serializedVersion: 2
     m_Bits: 64
-  health: 100
+  sc: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!50 &1595852217304190463
 Rigidbody2D:
   serializedVersion: 4

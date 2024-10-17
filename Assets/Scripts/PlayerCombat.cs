@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerCombat : MonoBehaviour
@@ -18,17 +19,25 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0;
 
     // player health
-    public int maxHealth = 100;
-    private int currentHealth;
+    private int maxHealth = 100;
+    public int currentHealth;
+
+    // // healthbar image 
+    // public Image healthBar;
+
+    public HealthManager healthManager;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = maxHealth;      // initialise currenthealth to maxhealth
+        // healthBar.fillAmount = 1;       // initialise health bar to full
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        // let player attack if a certain has passed since last attack
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetKeyDown(KeyCode.X))
@@ -58,7 +67,10 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("Player took damage: " + damage);
+        healthManager.ManageHealthBar(damage);
+        // Debug.Log("Player took damage. Current Health: " + currentHealth);
+
+        // healthBar.fillAmount = Mathf.Clamp((float)currentHealth / maxHealth, 0, 1);
 
         // Check if the player is dead
         if (currentHealth <= 0)
@@ -67,10 +79,9 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         Debug.Log("Player died!");
-        // Implement player death logic here (e.g., game over, respawn)
 
         // play death animation
         anim.SetBool("IsDead", true);
