@@ -31,8 +31,6 @@ public class EthUpdate : MonoBehaviour
 
         // Set up the button click listener
         updateButton.onClick.AddListener(OnUpdateButtonClick);
-
-        key = PlayerPrefs.GetString("public key");
     }
 
     async void OnUpdateButtonClick()
@@ -40,10 +38,8 @@ public class EthUpdate : MonoBehaviour
         try
         {
             // Update the balance by sending some ETH
-            var transactionHash = await SendEtherAsync(accountAddress, key, PlayerPrefs.GetInt("Score"));
+            var transactionHash = await SendEtherAsync(accountAddress, PlayerPrefs.GetString("public key"), PlayerPrefs.GetInt("Score"));
             Debug.Log($"Transaction hash: {transactionHash}");
-
-            PlayerPrefs.DeleteKey("public key");
 
             // Update the balance display
             await UpdateBalanceDisplay();
@@ -78,12 +74,26 @@ public class EthUpdate : MonoBehaviour
         // Get the balance of the account
         var balance = await web3.Eth.GetBalance.SendRequestAsync(accountAddress);
         var balanceInEther = Web3.Convert.FromWei(balance.Value);
-
-        var balance2 = await web3.Eth.GetBalance.SendRequestAsync(key);
+        
+        var balance2 = await web3.Eth.GetBalance.SendRequestAsync(PlayerPrefs.GetString("public key"));
         var balanceInEther2 = Web3.Convert.FromWei(balance2.Value);
 
         // Update UI with balance
         balanceText.text = $"Balance: {balanceInEther2} ETH";
         Debug.Log(balanceInEther);
+
+        PlayerPrefs.DeleteKey("public key");
+
+        // try {
+        //     // Update UI with balance
+        //     balanceText.text = $"Balance: {balanceInEther2} ETH";
+        //     Debug.Log(balanceInEther);
+        // }
+        // catch (Nethereum.Web3.Error) {
+        //     Debug.Log("Play again or enter public key");
+        // }
+        // finally {
+        //     PlayerPrefs.DeleteKey("public key");
+        // }
     }
 }
