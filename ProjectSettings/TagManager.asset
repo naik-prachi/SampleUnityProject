@@ -9,6 +9,8 @@ TagManager:
   - Gems
   - Public Key
   - Trap
+  - Key
+  - spikes
   layers:
   - Default
   - TransparentFX

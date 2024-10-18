@@ -12,6 +12,9 @@ public class EnemyLvl3 : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth;
 
+    // reference playerHealth script
+    // public PlayerCombat playerHealth;
+
     // player damage
     public int damage = 10; // Damage dealt to the player
     public float attackRange = 1.5f; // Range to attack the player
@@ -78,7 +81,7 @@ public class EnemyLvl3 : MonoBehaviour
 
     void Attack(PlayerCombat playerHealth)
     {
-        if (playerHealth != null)
+        if ((float)playerHealth.currentHealth != null)
         {
             playerHealth.TakeDamage(damage);
         }

@@ -21,10 +21,13 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && key != null)
+        if (collision.gameObject.CompareTag("Key"))
         {
             Destroy(key); // Destroy the key when the player reaches the door
             OpenDoor();
+        }
+        else {
+            Debug.Log("Get the key");
         }
     }
 
@@ -32,7 +35,6 @@ public class Door : MonoBehaviour
     {
         if (!isOpen)
         {
-            isOpen = true;
             Debug.Log("Door is opening...");
 
             // Play the "OpenDoor" animation by triggering the parameter

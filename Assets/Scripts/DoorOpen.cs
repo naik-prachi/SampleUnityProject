@@ -18,7 +18,7 @@ public class DoorOpen : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && key == null) // Check if key is collected (destroyed)
+        if (collision.gameObject.CompareTag("Key") && key == null) // Check if key is collected (destroyed)
         {
             OpenDoor();
         }

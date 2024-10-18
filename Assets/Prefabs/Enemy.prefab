@@ -181,6 +181,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8105058617929113763}
   maxHealth: 100
+  playerHealth: {fileID: 334032205397577263, guid: 55024c753849fab449d0989d41875e42, type: 3}
+  damage: 10
+  attackRange: 1.5
+  attackCooldown: 2
 --- !u!1 &9135315221933722432
 GameObject:
   m_ObjectHideFlags: 0

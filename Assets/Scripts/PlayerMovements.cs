@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovements : MonoBehaviour
 {
@@ -27,14 +28,13 @@ public class PlayerMovements : MonoBehaviour
     private float jumpForce = 9f;
     private float hurtForce = 20f;
 
-    // player health
-    private int currentHealth;
-    public int maxHealth = 100;
+    // private int currentHealth;
+    // public int maxHealth = 100;
+    public PlayerCombat pc;
 
     // to climb the ladder
     private float dirX, dirY;
     public bool ClimbingAllowed { get; set; }
-
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +44,12 @@ public class PlayerMovements : MonoBehaviour
         coll = GetComponent<Collider2D>();
 
         // player health
-        currentHealth = maxHealth;
+        // currentHealth = maxHealth;
+        // transform.position = new Vector3(
+        //     Mathf.Clamp(transform.position.x,a_x,b_x),
+        //     Mathf.Clamp(transform.position.y,a_y,b_y),
+        //     transform.position.z
+        // );
     }
 
     // Update is called once per frame
@@ -66,7 +71,6 @@ public class PlayerMovements : MonoBehaviour
 
         AnimationState();
         anim.SetInteger("state", (int)state);
-
     }
 
 
@@ -196,6 +200,14 @@ public class PlayerMovements : MonoBehaviour
         if (other.gameObject.CompareTag("Trap"))
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("EndingScene");
+        }
+
+        if (other.gameObject.CompareTag("spikes"))
+        {
+            Debug.Log("It hurts");
+            state = State.hurt;
+            pc.TakeDamage(10);
         }
     }
 
@@ -228,34 +240,34 @@ public class PlayerMovements : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
+//     public void TakeDamage(int damage)
+//     {
+//         currentHealth -= damage;
 
-        // play hurt animation
-        // anim.SetTrigger("Hurt");
+//         // play hurt animation
+//         // anim.SetTrigger("Hurt");
 
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
+//         if (currentHealth <= 0)
+//         {
+//             Die();
+//         }
+//     }
 
-    void Die()
-    {
-        // Handle player's death
-        Debug.Log("Player died!");
+//     void Die()
+//     {
+//         // Handle player's death
+//         Debug.Log("Player died!");
 
-        // play death animation
-        anim.SetBool("IsDead", true);
+//         // play death animation
+//         anim.SetBool("IsDead", true);
 
-        // disable the enemy
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+//         // disable the enemy
+//         GetComponent<Collider2D>().enabled = false;
+//         this.enabled = false;
 
-        // You can add death animations or restart the level here
-        Destroy(gameObject);  // Remove the player from the game
-    }
+//         // You can add death animations or restart the level here
+//         Destroy(gameObject);  // Remove the player from the game
+//     }
 
 
 

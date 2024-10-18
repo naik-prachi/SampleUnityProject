@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6518798304853142293}
   - component: {fileID: 6148874417429734893}
   - component: {fileID: 4184047740853343508}
+  - component: {fileID: 7382112911079980879}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -180,5 +181,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6254e467535ff0f4993fd5c723e9ca71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: {fileID: 0}
+  key: {fileID: 5593782423313031332, guid: db2b1d9907234344384b501d63334059, type: 3}
   nextLevelName: level3
+  lv: {fileID: 0}
+  nextLevelnumber: 0
+--- !u!50 &7382112911079980879
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7025138050368523297}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

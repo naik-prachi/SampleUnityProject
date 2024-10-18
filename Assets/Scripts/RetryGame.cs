@@ -20,8 +20,6 @@ public class RetryGame : MonoBehaviour
     // to load the start scene
     public void LoadGame()
     {
-        SceneManager.LoadScene("Level1"); 
-        PlayerPrefs.SetInt("Level",1);
-        PlayerPrefs.SetInt("Score",0);
+        SceneManager.LoadScene("Opening Scene");
     }
 }
